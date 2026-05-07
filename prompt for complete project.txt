@@ -1,0 +1,49 @@
+this is the sql script of our final sprint project of company, in my previous chat i discussed with you regarding it and you gave me these controllers : "Based on your Bus Ticket Booking System database, here are the controllers you need:
+
+
+
+
+
+AgencyController — CRUD for agencies
+
+
+
+AgencyOfficeController — CRUD for offices under each agency
+
+
+
+AddressController — create/get addresses (used by multiple entities)
+
+
+
+BusController — CRUD for buses per office
+
+
+
+DriverController — CRUD for drivers per office
+
+
+
+RouteController — CRUD for routes (city to city)
+
+
+
+TripController — create trips, get available trips, filter by route/date
+
+
+
+BookingController — book a seat, cancel, get bookings by trip
+
+
+
+PaymentController — initiate payment, get payment status, payment history
+
+
+
+CustomerController — CRUD for customers, get customer profile
+
+
+
+ReviewController — add review, get reviews by trip/customer"
+
+and after discussing with my 5 members team they modify something like : "hey we decided to do these 2 modifications : "Review merged in customer controller, address done through DTO", We have 5 members in the time and each controllers must have atleast 10 endpoints(we are using db first approach)" this is the folder structure which we are going to follow. now your task is to generate a complete .net 8 version project zip file which successfully run on vs code. use monolithic architecture and there must be 3 layer approach. in the zip file you must keep 3 folders, one for testing(x unit testing with moq), mvc(for frontend), web api(for backend with role based jwt auth).

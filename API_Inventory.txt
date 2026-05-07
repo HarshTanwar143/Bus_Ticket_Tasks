@@ -1,0 +1,81 @@
+Bus Ticket Booking API Inventory
+
+Controllers
+
+BusController
+GET /api/Bus - Returns all buses.
+GET /api/Bus/{id} - Returns one bus by ID, or 404 if missing.
+GET /api/Bus/office/{officeId} - Returns all buses for a specific office.
+GET /api/Bus/type/{type} - Returns buses filtered by bus type.
+GET /api/Bus/registration/{regNumber} - Returns a bus by registration number, or 404 if missing.
+GET /api/Bus/capacity?min=...&max=... - Returns buses whose capacity falls within the given range.
+GET /api/Bus/office/{officeId}/count - Returns the total number of buses for an office.
+POST /api/Bus - Creates a new bus.
+PUT /api/Bus/{id} - Updates an existing bus, or 404 if missing.
+DELETE /api/Bus/{id} - Deletes a bus, or 404 if missing.
+
+DriverController
+GET /api/Driver - Returns all drivers.
+GET /api/Driver/{id} - Returns one driver by ID, or 404 if missing.
+GET /api/Driver/office/{officeId} - Returns all drivers for a specific office.
+GET /api/Driver/license/{licenseNumber} - Returns a driver by license number, or 404 if missing.
+GET /api/Driver/search?name=... - Searches drivers by name.
+GET /api/Driver/city/{city} - Returns drivers filtered by city.
+GET /api/Driver/office/{officeId}/count - Returns the total number of drivers for an office.
+POST /api/Driver - Creates a new driver and its address record.
+PUT /api/Driver/{id} - Updates an existing driver, or 404 if missing.
+DELETE /api/Driver/{id} - Deletes a driver, or 404 if missing.
+
+Services
+
+BusService
+GetAllBusesAsync - Gets all buses from the repository and maps them to response DTOs.
+GetBusByIdAsync - Gets one bus by ID and maps it to a response DTO.
+GetBusesByOfficeAsync - Gets buses for one office.
+GetBusesByTypeAsync - Gets buses filtered by type.
+GetBusByRegistrationAsync - Gets one bus by registration number.
+GetBusesByCapacityRangeAsync - Gets buses whose capacity is within a min/max range.
+CreateBusAsync - Maps the request DTO to a Bus entity, saves it, then returns the created bus as a response DTO.
+UpdateBusAsync - Maps the DTO to a Bus entity, updates the record, then returns the updated bus.
+DeleteBusAsync - Deletes a bus by ID.
+GetBusCountByOfficeAsync - Returns the total bus count for an office.
+
+DriverService
+GetAllDriversAsync - Gets all drivers and maps them to response DTOs.
+GetDriverByIdAsync - Gets one driver by ID and maps it to a response DTO.
+GetDriversByOfficeAsync - Gets drivers for one office.
+GetDriverByLicenseAsync - Gets one driver by license number.
+GetDriversByNameAsync - Searches drivers by name.
+GetDriversByCityAsync - Gets drivers filtered by city.
+CreateDriverAsync - Creates a new address first, links it to the driver, saves the driver, then returns the created driver.
+UpdateDriverAsync - Updates a driver and its address fields, then returns the updated driver.
+DeleteDriverAsync - Deletes a driver by ID.
+GetDriverCountByOfficeAsync - Returns the total driver count for an office.
+
+Repositories
+
+BusRepository
+GetAllAsync - Reads all buses from the database, including office data.
+GetByIdAsync - Reads one bus by ID, including office data.
+GetByOfficeIdAsync - Reads buses for one office.
+GetByTypeAsync - Reads buses by type, case-insensitive.
+GetByRegistrationNumberAsync - Reads one bus by registration number.
+GetByCapacityRangeAsync - Reads buses whose capacity is within a given range.
+CreateAsync - Inserts a new bus row and saves it.
+UpdateAsync - Updates an existing bus row.
+DeleteAsync - Deletes a bus row if it exists.
+ExistsAsync - Checks whether a bus exists by ID.
+GetTotalBusCountByOfficeAsync - Counts buses for one office.
+
+DriverRepository
+GetAllAsync - Reads all drivers from the database, including office and address data.
+GetByIdAsync - Reads one driver by ID, including office and address data.
+GetByOfficeIdAsync - Reads drivers for one office.
+GetByLicenseNumberAsync - Reads one driver by license number.
+GetByNameAsync - Searches drivers by name, case-insensitive.
+GetByCityAsync - Reads drivers whose address city matches.
+CreateAsync - Inserts a new driver row and saves it.
+UpdateAsync - Updates driver fields and, if present, updates the linked address fields.
+DeleteAsync - Deletes a driver row if it exists.
+ExistsAsync - Checks whether a driver exists by ID.
+GetTotalDriverCountByOfficeAsync - Counts drivers for one office.
