@@ -1,0 +1,97 @@
+clear basics
+
+dotnet architecture very clearllllllly
+dotnet ecosystem
+naming versions by micro
+cls, clr, bcl, cts (like how does it do it)
+managed code and unmanaged code with proper example
+data type, interoperability
+nullable types
+how dotnet supports multiple programming languages.
+how clr executes, how does it understand different language codes.
+boxing vs unboxing
+namespace, learn 2 things that you can do in a namespace
+what is class ,object
+access specifier, access modifiers (there types) understand in detail
+default access specifier for class, member, method function, interface
+what is a constructor, is it required, if not present what will happen
+how the underline engine is going to get executed without constructor
+static, verisou places where we can use static
+can be used in class, constructor, method, property, variables
+how static constructor gets invoked, who invokes it, when should I use it.
+inheritance, have a clear idea
+abstract class, abstract vs interface
+interface is very important in DI
+controller is a abstract class
+when to use abstract method, virtual method
+models in ef core, all properties are virtual.
+all frameworks uses oops
+method hiding in virtual
+colections, generic and non-generic, what comes uinder them
+jagged array, where should I use it?
+reason people root for generic  collection, non-generic is very good at hiding data but why generic.
+when I should use list, dictionary? 
+linq, why linq, why linq, what are different methods (learn every one of them), better performance? detailed idea about different methods
+query in two different ways in linq, what syntax have I used and why? will use both.
+join, group by, order by in linq
+be clear with the syntax, learn joins, order by, group by
+when to use skip, then, limit
+understand delgege, diff type of generic delegate.
+
+csharp done above
+
+ef core
+why? advantage? why to communicate to db with ef core
+ef core -> open source
+ado.net vs ef core why efcore
+different types of approaches, code first and db first.
+migrations
+add migration update migration, what happenes exactly in both.
+why migrations classes required, if class not present what will happen (will I able to communicate)
+up and down method in migrations.
+three diff ways to load data
+eager loading, lazy loading, explicit loading, what is the diff, when should I use what?
+linq two diff ways in which query gets executed.
+one is default exec, immediate exec
+.tolist() -> immediate
+
+
+mvc later
+
+
+api
+what is api, why???
+what is rest, why? representatial state transfer
+should know return types of api (Status code)
+put vs patch
+diff types of routing
+middleware
+filter 5 tyeps of filters, execute in order, in 'dotnet'
+order of execution of filter
+jwt? not going to ask jwt implementation
+format of jwt formation
+why api?
+before api you have mvc
+
+mvc properties
+tempdata, viewbag, viewdata, diff in these
+
+if I transfer data from one controller to another, have to maintain data between requests, just learn the abvoet hing.
+same fitlers,routing (default, what is?)in mvc
+heleprs in mvc
+partial queue in mvc
+viewcomponent in mvc? have I even worked on it?
+two kind of heplers (html, tag)
+html helpers-> three types
+understand tage helper
+razor engine, razor views what and why.....
+
+I learned this earlier??????????
+
+requirement -> time
+3 hours more than sufficient
+one day to days ?
+
+
+
+where are you using above things.
